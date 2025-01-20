@@ -74,7 +74,12 @@ export default function Home() {
         <TopProducers producers={topProducers} />
       </main>
       {currentSong && (
-        <AudioPlayer song={currentSong} onClose={() => setCurrentSong(null)} />
+        <AudioPlayer
+          song={currentSong}
+          onClose={() => setCurrentSong(null)}
+          onNext={() => setCurrentSong(songs[songs.findIndex((s) => s.id === currentSong.id) + 1])}
+          onPrevious={() => setCurrentSong(songs[songs.findIndex((s) => s.id === currentSong.id) - 1])}
+        />
       )}
     </div>
   );

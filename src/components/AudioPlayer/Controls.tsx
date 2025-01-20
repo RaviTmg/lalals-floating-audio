@@ -1,12 +1,18 @@
 import { Pause, Play, SkipBack, SkipForward } from 'lucide-react';
+import { MouseEventHandler } from 'react';
 import { useGlobalAudioPlayer } from 'react-use-audio-player';
 
-const Controls = () => {
-  const { togglePlayPause, playing } = useGlobalAudioPlayer()
+const Controls = ({ onNext, onPrevious }: {
+  onNext: MouseEventHandler<HTMLButtonElement>;
+  onPrevious: MouseEventHandler<HTMLButtonElement>;
+}) => {
+  const { togglePlayPause, playing } = useGlobalAudioPlayer();
   return (
     <>
       <div className="flex gap-2 items-center mx-4">
-        <SkipBack className="w-5 h-5" fill="#5d6165" color="#5d6165" />
+        <button onClick={onPrevious}>
+          <SkipBack className="w-5 h-5" fill="#5d6165" color="#5d6165" />
+        </button>
         <button
           className="p-2 w-fit rounded-full group bg-[#FFFFFF12]"
           onClick={togglePlayPause}
@@ -21,7 +27,9 @@ const Controls = () => {
             <Pause className="w-5 h-5" fill="white" color="white" />
           )}
         </button>
-        <SkipForward className="w-5 h-5" fill="#5d6165" color="#5d6165" />
+        <button onClick={onNext}>
+          <SkipForward className="w-5 h-5" fill="#5d6165" color="#5d6165" />
+        </button>
       </div>
     </>
   );

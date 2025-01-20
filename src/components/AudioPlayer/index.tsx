@@ -14,9 +14,13 @@ import Image from "next/image";
 const AudioPlayer = ({
   song,
   onClose,
+  onNext,
+  onPrevious,
 }: {
   song: ISong;
   onClose: MouseEventHandler<HTMLButtonElement>;
+  onNext: MouseEventHandler<HTMLButtonElement>;
+  onPrevious: MouseEventHandler<HTMLButtonElement>;
 }) => {
   const { play } = useGlobalAudioPlayer();
 
@@ -54,7 +58,7 @@ const AudioPlayer = ({
               className="h-full mr-2 max-w-20 object-cover"
             />
             <SongTitle currentSong={song} />
-            <Controls />
+            <Controls onNext={onNext} onPrevious={onPrevious} />
             <SongPrompt currentSong={song} />
             <PlayerOptions currentSong={song} />
           </div>
