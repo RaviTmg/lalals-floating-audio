@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Thumb customization */
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 0.6rem;
+  width: 0.6rem;
+  border-radius: 50%;
+  background: #bec2c8;
+  cursor: pointer;
+  opacity: 0; /* Make it invisible */
+  transition: opacity 0.3s ease;
+}
+.audio-player-group:hover input[type='range']::-webkit-slider-thumb {
+  opacity: 1; /* Make it visible */
+}
+
+input[type='range']::-moz-range-thumb {
+  height: 0.6rem;
+  width: 0.6rem;
+  border-radius: 50%;
+  background: #bec2c8;
+  cursor: pointer;
+  opacity: 0; /* Make it invisible */
+  transition: opacity 0.3s ease;
+}
+
+.audio-player-group:hover input[type='range']::-moz-range-thumb {
+  opacity: 1;
+}
+
+input[type='range']::-ms-thumb {
+  height: 0.6rem;
+  width: 0.6rem;
+  border-radius: 50%;
+  background: #bec2c8;
+  cursor: pointer;
+  opacity: 0; /* Make it invisible */
+  transition: opacity 0.3s ease;
+}
+
+.audio-player-group:hover input[type='range']::-ms-thumb {
+  opacity: 1;
+}
