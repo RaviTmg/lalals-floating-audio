@@ -28,9 +28,9 @@ const AudioPlayer = ({
     <AnimatePresence>
       {song && (
         <motion.div
-          initial={{ y: "100%", opacity: 0 }}
+          initial={{ y: "100%", opacity: 1 }}
           animate={{ y: "0%", opacity: 1 }}
-          exit={{ y: "100%", opacity: 0 }}
+          exit={{ y: "100%", opacity: 1 }}
           transition={{
             type: "spring",
             stiffness: 300,
@@ -45,7 +45,7 @@ const AudioPlayer = ({
           >
             <X width={14} height={14} />
           </button>
-          <div className="w-full h-full rounded-2xl bg-[#41404000] flex items-center justify-between overflow-hidden text-primary_lals-1000 pr-4 border border-[#2C343C] backdrop-blur-lg shadow-[0_0_50px_0_#00000080;]">
+          <div className="w-full h-full rounded-2xl bg-transparent flex items-center justify-between overflow-hidden text-primary_lals-1000 pr-4 border border-[#2C343C] backdrop-blur-[50px] shadow-[0_0_50px_0_#00000080;]">
             <Image
               src={song.thumbnail}
               alt={song.title}

@@ -11,7 +11,7 @@ const SongPrompt = (props: { currentSong: ISong }) => {
           {line}
         </span>
       ))}
-      <div className='bg-gradient-to-b from-[#13191F00] to-[#16191C] h-2/3 absolute w-full bottom-0'></div>
+      {/* <div className='bg-gradient-to-b from-[#13191F00] to-[#16191C] h-2/3 absolute w-full bottom-0'></div> */}
     </div>
   );
 };

@@ -9,8 +9,8 @@ export const topProducers = [
   { name: "Producer Two", followers: "15M", avatar: "/alona.png" },
   { name: "Producer Three", followers: "7M", avatar: "/taylor.png" },
   { name: "Producer Four", followers: "7M", avatar: "/elon.png" },
-  { name: "Producer Four", followers: "7M", avatar: "/elon.png" },
-  { name: "Producer Four", followers: "7M", avatar: "/elon.png" },
-  { name: "Producer Four", followers: "7M", avatar: "/elon.png" },
+  { name: "Producer Four", followers: "7M", avatar: "/drake.png" },
+  { name: "Producer Four", followers: "7M", avatar: "/alona.png" },
+  { name: "Producer Four", followers: "7M", avatar: "/taylor.png" },
   { name: "Producer Four", followers: "7M", avatar: "/elon.png" },
 ];
