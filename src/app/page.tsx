@@ -30,7 +30,7 @@ const Features = () => (
   <div className="flex justify-between p-8 border-t border-b border-gray-800">
     <div className="flex items-center space-x-2 text-gray-300">
       <BestAi />
-      <span>World&apos Best AI</span>
+      <span>World&apos;s Best AI</span>
     </div>
     <div className="flex items-center space-x-2 text-gray-300">
       <Download />
